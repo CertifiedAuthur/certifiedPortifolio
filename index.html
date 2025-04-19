@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CertifiedAuthur Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b1e0628663.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo01.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Machine Learning</p>
+                <h1>Hi, I'm <span>Okafor</span><br>Authur From Nigeria</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -------------about------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/ppic.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I’m Chibuzor Authur Okafor, a Machine Learning & AI Engineer from Nigeria with a passion for building intelligent, 
+                        human-centered systems.
+
+                        My journey began with a degree in Soil Science from Nnamdi Azikiwe University, then shifted through the hospitality 
+                        industry where I picked up essential soft skills that still guide my approach today. Now, I channel that experience 
+                        into the world of data and AI solving real-world problems with precision and creativity.
+                        
+                        I'm certified in Google Data Analytics, Google Advanced Data Analytics, IBM AI Engineering, and Python for Financial 
+                        Analysis, and I work with tools like SQL, Python, R, FastAPI, Streamlit, OpenAI APIs, and Google Cloud Platform. 
+                        But what really excites me is crafting smart applications using Retrieval-Augmented Generation (RAG) and building 
+                        multi-agent systems using LangGraph.
+                        
+                        Whether it’s chatbots, internal tools, or AI-powered assistants, I love developing agents that can think, collaborate, 
+                        and act all deployed seamlessly via Vercel, AWS, GCP, GitHub, or wherever you need them.
+                        
+                        At the core, I’m someone who finds purpose in helping others through code, conversation, and collaboration. 
+                        Let’s explore the future of AI together!</p>
+
+                        <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Machine Learning</span><br>Model development</li>
+                                <li><span>AI Engineering</span><br>Building Artificial Inteligence apps</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>2024</span><br>Data Scientist at NUPAT</li>
+                                <li><span>2024</span><br>Machine Learning / AI Engineer at NUPAT</li>
+                                <li><span>2024</span><br>Freelance AI Engineer – Confidential Projects<br>
+                                    <small>Worked on multiple high-impact projects involving chatbot development, 
+                                        Retrieval-Augmented Generation (RAG), agent workflows using LangGraph, and deployment to platforms 
+                                        like AWS, GCP, and Vercel. Delivered solutions for e-commerce, customer support, and internal 
+                                        automation while maintaining strict client confidentiality.</small>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2023</span><br>BSc Soil Science, Nnamdi Azikiwe University</li>
+                                <li><span>2023</span><br>Google Data Analytics, Google</li>
+                                <li><span>2024</span><br>Google Advanced Data Analytics, Google</li>
+                                <li><span>2024</span><br>IBM AI Engineering, IBM</li>
+                                <li><span>2024</span><br>Python And Statistics For Financial Analysis, Google</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------services----------- -->
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Machine Learning</h2>
+                    <p>As a Machine Learning Engineer, I specialize in building intelligent systems that leverage 
+                        data to drive decision-making and automation. My services include data preprocessing, 
+                        model development, and deployment, focusing on applications in predictive analytics, 
+                        natural language processing, and computer vision. By combining expertise in machine 
+                        learning algorithms with efficient code and cloud-based deployment, I help businesses 
+                        transform complex data into actionable insights, optimize operations, and achieve scalable 
+                        solutions.</p>
+                        <!-- <a href="#">Learn more</a> -->
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>Artificial Inteligence</h2>
+                    <p>As an AI Engineer, I design and build intelligent systems that go beyond traditional automation. 
+                        I specialize in developing advanced solutions using Retrieval-Augmented Generation (RAG), 
+                        combining the power of language models with real-time access to relevant data to deliver smart, 
+                        context-aware insights.
+
+                        But that’s just the beginning. I also build multi-agent systems of all kinds using tools like LangGraph, 
+                        enabling collaborative agents that can reflect, reason, and make decisions together. Whether it’s a chatbot, 
+                        a tool-using assistant, or an end-to-end autonomous agent, I tailor each one to meet real-world needs.
+                        
+                        I work across a broad tech stack including JavaScript, Next.js, and Python—and I can deploy your AI applications anywhere: 
+                        Vercel, AWS, GCP, GitHub Pages, or your custom infrastructure. From data prep to model deployment, 
+                        my work helps businesses unlock the full potential of AI—automating complex tasks and delivering actionable, 
+                        personalized insights that truly make a difference.</p>
+                        <!-- <a href="#">Learn more</a> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-------------portfolio------------ -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/cyber.jpg">
+                    <div class="layer">
+                        <h3>CyberDomain App</h3>
+                        <p>This is an AI-driven system designed to enhance information retrieval in cybersecurity 
+                            domains by expanding search queries and reranking retrieved results. Watch the full demonstration here 
+                            <a href="https://youtu.be/eP0-d176JB8" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a> 
+                                Check out the app <a href="https://cyberdomain-w8q5bay693caozpjviytug.streamlit.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/bankvista.jpeg">
+                    <div class="layer">
+                        <h3>bankvista App</h3>
+                        <p>
+                            The BankVista Chatbot is a conversational AI solution designed to streamline banking tasks with ease.
+                            Watch the full demonstration here: <a href="https://youtu.be/tZqYa1yIoxk" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                        </p>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/db.jpeg">
+                    <div class="layer">
+                        <h3>AtliQ T-Shirts Database Q&A App</h3>
+                        <p>
+                            This project is a Q&A system for querying a T-shirt inventory database using Google Generative AI, SQLDatabase, and LangChain libraries.
+                            Watch the full demonstration here: <a href="https://youtu.be/EAQMOoVbGAE" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square"></i></a></p>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <a href="https://certifiedauthur.github.io/AuthurTheAnalyst.github.io/" class="btn">See more</a>
+        </div>
+    </div>
+    <!-------------contact--------------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>chibuzorauthur@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+2349036546571</p>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/profile.php?id=100095382873499"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://x.com/AuthurOkafor"><i class="fa-brands fa-x-twitter"></i></i></a>
+                        <a href="https://www.instagram.com/official_certifiedauthur/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/chibuzorauthur?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2B%2Feyzd44QZWwXzR%2BOu1uSg%3D%3D"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="images/Okafor Authur Resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="Email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright @ CertifiedAuthur.</p>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu(){
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+            sidemenu.style.right = "-130px";
+        }
+    </script>
+    <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzL6P9Rp02xMI9ctxYLUws-U2P5n54KKdfaNmAnWc8qy9oO15C_Ba0q1yBhoRmunW88/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+    </script>
+
+
+</body>
+</html>

@@ -48,7 +48,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-6 sm:px-[8%]">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 
-          {/* Left — info */}
+          {/* Left: info */}
           <Reveal direction="left" className="w-full lg:w-[35%] shrink-0">
             <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-white mb-8">
               Contact Me
@@ -88,7 +88,7 @@ export default function Contact() {
             </a>
           </Reveal>
 
-          {/* Right — form */}
+          {/* Right: form */}
           <Reveal direction="right" className="flex-1 min-w-0">
             <form onSubmit={handleSubmit} className="space-y-4">
               <input

@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 
 const roles = [
-  'Machine Learning Engineer',
-  'AI Engineer',
-  'RAG Specialist',
-  'Multi-Agent Builder',
+  'Full-Stack AI Engineer',
+  'AI Systems Architect',
+  'Founding Engineer',
+  'Product Engineer',
 ]
 
 export default function Hero() {
@@ -32,7 +32,7 @@ export default function Hero() {
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-bg/60" />
+      <div className="absolute inset-0 bg-bg/65" />
 
       <div className="relative z-10 w-full px-6 sm:px-[8%] max-w-7xl mx-auto">
         {/* Cycling role */}
@@ -69,18 +69,35 @@ export default function Hero() {
           Authur From Nigeria
         </motion.h1>
 
-        {/* CTA */}
+        {/* Tagline */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.72, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-5 text-[15px] sm:text-[17px] text-muted max-w-xl leading-relaxed"
+        >
+          I design, build, and ship complete intelligent software systems: architecture,
+          scalable backends, production frontends, and cloud deployment.
+        </motion.p>
+
+        {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.85, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-10"
+          transition={{ duration: 0.8, delay: 0.92, ease: [0.16, 1, 0.3, 1] }}
+          className="mt-10 flex flex-wrap gap-4"
         >
           <button
             onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-            className="inline-block border border-accent text-white px-10 py-3.5 rounded-md text-[15px] font-medium hover:bg-accent transition-colors duration-300 cursor-pointer"
+            className="inline-block bg-accent text-white px-10 py-3.5 rounded-md text-[15px] font-medium hover:opacity-90 transition-opacity duration-200 cursor-pointer"
           >
             View My Work
+          </button>
+          <button
+            onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            className="inline-block border border-white/30 text-white px-10 py-3.5 rounded-md text-[15px] font-medium hover:border-accent hover:text-accent transition-colors duration-300 cursor-pointer"
+          >
+            Get In Touch
           </button>
         </motion.div>
       </div>

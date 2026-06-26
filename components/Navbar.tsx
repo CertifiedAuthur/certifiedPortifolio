@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 
-const sections = ['header', 'about', 'services', 'portfolio', 'contact']
-const labels   = ['Home', 'About', 'Services', 'Portfolio', 'Contact']
+const sections = ['header', 'about', 'skills', 'services', 'portfolio', 'contact']
+const labels   = ['Home', 'About', 'Skills', 'Services', 'Work', 'Contact']
 
 export default function Navbar() {
   const [active, setActive]   = useState('header')

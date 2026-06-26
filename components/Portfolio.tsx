@@ -16,7 +16,7 @@ const projects: Project[] = [
     image: '/images/Learnvault_logo.png',
     contain: true,
     url: 'https://learnvault.academy',
-    stack: ['Next.js', 'FastAPI', 'PostgreSQL', 'LiveKit', 'pgvector', 'Celery', 'AWS'],
+    stack: ['Next.js', 'Go', 'Asynq', 'PostgreSQL', 'LiveKit', 'pgvector', 'Caddy', 'VPS'],
     description:
       'Production multi-tenant SaaS platform built end-to-end: custom auth with full tenant isolation, live classrooms via LiveKit, speaker-diarized transcription, AI-generated summaries and quizzes, RAG-powered tutoring with pgvector, credit billing system, and a PostgreSQL schema designed for unlimited organizations.',
   },
@@ -25,7 +25,7 @@ const projects: Project[] = [
     image: '/images/mailcheckr_logo.png',
     contain: true,
     url: 'https://mcheckr.com',
-    stack: ['FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'Next.js', 'Nginx', 'IMAP'],
+    stack: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'Next.js', 'Nginx', 'IMAP'],
     description:
       'Distributed email aggregation system built from scratch: IMAP sync engine, PostgreSQL storage layer, multilingual financial classification, real-time alerting via Telegram, async task processing with Celery and Redis, and a full-stack Next.js dashboard. Deployed on VPS with Nginx reverse proxy.',
   },

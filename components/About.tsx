@@ -18,7 +18,7 @@ const content: Record<Tab, { label: string; sub: string }[]> = {
     { label: 'Backend Engineering',        sub: 'FastAPI, Python, Go, REST APIs, Celery, Redis, WebSockets, JWT authentication'             },
     { label: 'Frontend Engineering',       sub: 'Next.js, React, TypeScript, Tailwind CSS, Framer Motion, component architecture'           },
     { label: 'System Architecture',        sub: 'Multi-tenant SaaS, distributed systems, API design, scalability patterns, event-driven'    },
-    { label: 'Databases',                  sub: 'PostgreSQL, pgvector, Redis, query optimization, indexing, data modeling, migrations'       },
+    { label: 'Databases',                  sub: 'PostgreSQL, pgvector, Supabase, Redis, query optimization, indexing, data modeling, migrations'       },
     { label: 'Cloud & Infrastructure',     sub: 'AWS, GCP, Vercel, Docker, Linux/VPS, Nginx, CI/CD, environment management'                },
   ],
   experience: [

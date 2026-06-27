@@ -82,7 +82,7 @@ function SkillCard({ domain }: { domain: Domain }) {
         <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 shrink-0">
           <i className={`${domain.icon} text-accent text-[18px]`} />
         </div>
-        <h3 className="text-[15px] font-semibold text-white">{domain.title}</h3>
+        <h3 className="text-[15px] font-semibold text-foreground">{domain.title}</h3>
       </div>
       <div className="flex flex-wrap gap-2">
         {domain.tags.map((tag) => (
@@ -103,7 +103,7 @@ export default function Skills() {
     <section id="skills" className="py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-6 sm:px-[8%]">
         <Reveal>
-          <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-white mb-4">
+          <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-foreground mb-4">
             Engineering Expertise
           </h2>
           <p className="text-muted text-[15px] mb-14 max-w-xl">

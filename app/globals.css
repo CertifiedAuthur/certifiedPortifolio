@@ -9,6 +9,18 @@
   --surface-3: #1e1e1e;
   --border: #252525;
   --text-muted: #a0a0a0;
+  --foreground: #f5f3f0;
+}
+
+/* Light mode palette — warm-tinted neutrals toward accent hue */
+html.light {
+  --bg: #f5f2ef;
+  --surface: #ece9e4;
+  --surface-2: #e3dfd9;
+  --surface-3: #d9d4cd;
+  --border: #c8c2ba;
+  --text-muted: #64605b;
+  --foreground: #1a1613;
 }
 
 @theme inline {
@@ -20,6 +32,7 @@
   --color-surface-3: var(--surface-3);
   --color-border: var(--border);
   --color-muted: var(--text-muted);
+  --color-foreground: var(--foreground);
   --font-sans: var(--font-poppins);
 }
 
@@ -27,9 +40,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Smooth theme transition on surfaces and text */
+html, body, * {
+  transition: background-color 0.25s ease, border-color 0.2s ease, color 0.15s ease;
+}
+
+/* Cancel transition on interactive states so hover feels instant */
+*:hover, *:focus, *:active {
+  transition: background-color 0.25s ease, border-color 0.2s ease, color 0.15s ease,
+              opacity 0.2s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 body {
   background-color: var(--bg);
-  color: #fff;
+  color: var(--foreground);
 }
 
 /* Scrollbar */
@@ -67,12 +91,16 @@ body {
   margin-top: 14px;
 }
 
-/* Skill card wide variant handled in Tailwind via lg:col-span-2 */
-/* Subtle dot grid texture for alternating sections */
+/* Dot grid texture for Skills and Services sections */
 #skills,
 #services {
   background-image: radial-gradient(circle, rgba(255,255,255,0.025) 1px, transparent 1px);
   background-size: 28px 28px;
+}
+
+html.light #skills,
+html.light #services {
+  background-image: radial-gradient(circle, rgba(0,0,0,0.06) 1px, transparent 1px);
 }
 
 /* Reduce motion */

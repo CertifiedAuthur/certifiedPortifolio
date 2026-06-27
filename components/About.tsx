@@ -71,7 +71,7 @@ export default function About() {
 
           {/* Bio */}
           <Reveal direction="right" className="flex-1 min-w-0">
-            <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-white leading-tight mb-6">
+            <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-foreground leading-tight mb-6">
               About Me
             </h2>
             <p className="text-[15px] leading-relaxed mb-8">
@@ -96,8 +96,8 @@ export default function About() {
                   className={`relative text-[15px] font-medium cursor-pointer transition-colors pb-2
                     after:absolute after:left-0 after:bottom-0 after:h-[3px] after:bg-accent after:rounded-full after:transition-all after:duration-300
                     ${active === id
-                      ? 'text-white after:w-1/2'
-                      : 'text-muted hover:text-white after:w-0'
+                      ? 'text-foreground after:w-1/2'
+                      : 'text-muted hover:text-foreground after:w-0'
                     }`}
                 >
                   {label}
@@ -109,7 +109,7 @@ export default function About() {
             <ul className="space-y-3">
               {content[active].map(({ label, sub }, i) => (
                 <li key={i} className="text-[14px]">
-                  <span className="text-accent font-semibold">{label}</span>
+                  <span className="text-accent font-semibold leading-snug">{label}</span>
                   <br />
                   {sub}
                 </li>

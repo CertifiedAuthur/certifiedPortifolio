@@ -51,7 +51,7 @@ export default function Services() {
     <section id="services" className="py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-6 sm:px-[8%]">
         <Reveal>
-          <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-white mb-4">
+          <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-foreground mb-4">
             What I Build
           </h2>
           <p className="text-muted text-[15px] mb-14 max-w-xl">
@@ -64,7 +64,7 @@ export default function Services() {
             <Reveal key={title} delay={i * 0.1}>
               <div className="group bg-surface-3 rounded-xl p-8 text-[13px] font-light leading-relaxed text-muted transition-all duration-400 hover:-translate-y-2 hover:bg-accent hover:text-white cursor-default h-full">
                 <i className={`${icon} text-4xl mb-6 block text-accent group-hover:text-white transition-colors duration-400`} />
-                <h3 className="text-[17px] font-semibold text-white mb-3 transition-colors duration-400">
+                <h3 className="text-[17px] font-semibold text-foreground group-hover:text-white mb-3 transition-colors duration-400">
                   {title}
                 </h3>
                 <p className="leading-[1.75]">{body}</p>

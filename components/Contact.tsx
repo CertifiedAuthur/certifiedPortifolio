@@ -50,7 +50,7 @@ export default function Contact() {
 
           {/* Left: info */}
           <Reveal direction="left" className="w-full lg:w-[35%] shrink-0">
-            <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-white mb-8">
+            <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-foreground mb-8">
               Contact Me
             </h2>
 
@@ -98,7 +98,7 @@ export default function Contact() {
                 value={form.name}
                 onChange={handleChange}
                 required
-                className="w-full bg-surface-3 border-2 border-border text-white placeholder-muted rounded-lg px-4 py-3.5 text-[15px] outline-none focus:border-accent transition-colors duration-200"
+                className="w-full bg-surface-3 border-2 border-border text-foreground placeholder-muted rounded-lg px-4 py-3.5 text-[15px] outline-none focus:border-accent transition-colors duration-200"
               />
               <input
                 type="email"
@@ -107,7 +107,7 @@ export default function Contact() {
                 value={form.email}
                 onChange={handleChange}
                 required
-                className="w-full bg-surface-3 border-2 border-border text-white placeholder-muted rounded-lg px-4 py-3.5 text-[15px] outline-none focus:border-accent transition-colors duration-200"
+                className="w-full bg-surface-3 border-2 border-border text-foreground placeholder-muted rounded-lg px-4 py-3.5 text-[15px] outline-none focus:border-accent transition-colors duration-200"
               />
               <textarea
                 name="message"

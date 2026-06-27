@@ -31,8 +31,8 @@ export default function Hero() {
         backgroundAttachment: 'fixed',
       }}
     >
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-bg/65" />
+      {/* Overlay — always dark so hero text stays readable in both themes */}
+      <div className="absolute inset-0 bg-[rgba(8,8,8,0.65)]" />
 
       <div className="relative z-10 w-full px-6 sm:px-[8%] max-w-7xl mx-auto">
         {/* Cycling role */}

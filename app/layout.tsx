@@ -108,6 +108,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${poppins.variable} scroll-smooth`}>
       <head>
         <link rel="icon" type="image/png" href="/images/portfolio.png" />
+        {/* Prevent FOUC: apply stored or system theme before first paint */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){var s=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: light)').matches;if(s==='light'||(s===null&&p)){document.documentElement.classList.add('light');}})();` }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

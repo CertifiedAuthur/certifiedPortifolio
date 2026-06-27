@@ -66,7 +66,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Card footer: name + stack */}
       <div className="px-5 pt-4 pb-5 flex flex-col gap-3 flex-1">
-        <h3 className="text-[15px] font-semibold text-white">{project.name}</h3>
+        <h3 className="text-[15px] font-semibold text-foreground">{project.name}</h3>
         <div className="flex flex-wrap gap-1.5">
           {project.stack.map((tag) => (
             <span
@@ -112,7 +112,7 @@ export default function Portfolio() {
     <section id="portfolio" className="py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-6 sm:px-[8%]">
         <Reveal>
-          <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-white mb-4">
+          <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-foreground mb-4">
             Shipped Systems
           </h2>
           <p className="text-muted text-[15px] mb-14 max-w-xl">
@@ -141,9 +141,7 @@ export default function Portfolio() {
         <div className="text-center mt-14">
           <a
             href="https://certifiedauthur.github.io/AuthurTheAnalyst.github.io/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block border border-accent text-white px-12 py-3.5 rounded-md text-[15px] font-medium hover:bg-accent transition-colors duration-300"
+            className="inline-block border border-accent text-foreground px-12 py-3.5 rounded-md text-[15px] font-medium hover:bg-accent hover:text-white transition-colors duration-300"
           >
             See More
           </a>

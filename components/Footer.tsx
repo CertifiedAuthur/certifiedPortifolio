@@ -66,9 +66,15 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-[13px] text-muted">
-          <p>Copyright &copy; {new Date().getFullYear()} CertifiedAuthur. All rights reserved.</p>
-          <p>Designed and built by Chibuzor Authur Okafor</p>
+        <div className="mt-10 pt-8 border-t border-border">
+          <p className="text-[13px] text-muted leading-relaxed mb-6 max-w-xl">
+            Every system I build is designed with one standard in mind: whether it is still
+            running correctly, at scale, two years from now.
+          </p>
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-[13px] text-muted">
+            <p>Copyright &copy; {new Date().getFullYear()} CertifiedAuthur. All rights reserved.</p>
+            <p>Designed and built by Chibuzor Authur Okafor</p>
+          </div>
         </div>
       </div>
     </footer>

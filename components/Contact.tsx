@@ -13,10 +13,10 @@ const socials = [
 ]
 
 const openTo = [
-  'AI engineering roles at product companies and startups',
-  'Technical consulting and architecture design',
-  'Founding engineer positions building AI products',
-  'Long-term partnerships on SaaS and infrastructure',
+  'Full-time and contract AI engineering roles at product companies and startups',
+  'Technical architecture consulting and system design engagements',
+  'Founding engineer roles where AI is a core part of the product',
+  'Long-term technical partnerships on SaaS platforms, AI systems, and backend infrastructure',
 ]
 
 export default function Contact() {
@@ -61,9 +61,10 @@ export default function Contact() {
             </h2>
 
             <p className="text-muted text-[15px] leading-relaxed mb-8">
-              I take on meaningful AI engineering work. Whether you are building a product,
-              scaling infrastructure, or integrating AI into existing systems, reach out and
-              let&apos;s talk about what you are trying to build.
+              If you are building an AI-powered product, integrating intelligent systems into
+              an existing platform, or looking for an engineer who can own the work from
+              architecture through deployment and long-term operation, I want to hear what
+              you are working on.
             </p>
 
             {/* Open to */}

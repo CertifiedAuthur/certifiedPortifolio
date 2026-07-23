@@ -6,9 +6,9 @@ const experience = [
     company: 'Kuuka',
     role: 'AI Engineer, Contract',
     highlights: [
-      'Built AI-driven supplier intelligence automation and a multi-tenant campaign delivery platform from the ground up',
-      'Implemented RBAC tenant isolation with CI/CD test coverage across 50+ endpoints',
-      'Architected audit logging and GDPR compliance infrastructure for production deployment',
+      'Delivered AI-driven supplier intelligence automation and multi-tenant campaign infrastructure from scratch, enabling multiple client organizations to operate with strict data isolation on a single shared platform',
+      'Secured 50+ production endpoints with RBAC-enforced tenant isolation and full CI/CD test coverage, enabling confident deployment across a multi-tenant environment',
+      'Architected GDPR-compliant audit logging that shipped to production without post-deployment compliance remediation',
     ],
   },
   {
@@ -16,9 +16,9 @@ const experience = [
     company: 'Possibl',
     role: 'AI Engineer, Contract',
     highlights: [
-      'Architected multi-agent conversational AI using LangChain and LangGraph with stateful memory',
-      'Designed a NL-to-SQL analytics pipeline backed by PostgreSQL with conversation checkpointing',
-      'Implemented automated memory summarization and human-in-the-loop decision routing',
+      'Designed a multi-agent conversational AI system with stateful memory using LangChain and LangGraph, enabling sessions that maintain full context across extended exchanges',
+      'Built a natural language to SQL analytics pipeline over PostgreSQL, allowing non-technical users to query structured data in plain English without writing a single query',
+      'Implemented automated memory summarization and human-in-the-loop decision routing, keeping AI responses within defined boundaries under real production conditions',
     ],
   },
   {
@@ -26,9 +26,9 @@ const experience = [
     company: 'Zenovo AI',
     role: 'Applied AI Engineer, Contract',
     highlights: [
-      'Built a RAG platform on PostgreSQL and pgvector for intelligent RFQ/RFP proposal generation',
-      'Reduced proposal preparation time by 70% through multi-agent LLM orchestration',
-      'Engineered async infrastructure with Redis and Celery for reliable, production-grade processing',
+      'Built a RAG-powered proposal generation platform on PostgreSQL and pgvector, enabling teams to produce intelligent, context-aware RFQ and RFP responses automatically',
+      'Reduced proposal preparation time by 70% through multi-agent LLM orchestration, turning a multi-day manual process into an automated workflow',
+      'Engineered async processing infrastructure with Redis and Celery, decoupling generation workloads from request latency for reliable production throughput',
     ],
   },
   {
@@ -36,9 +36,9 @@ const experience = [
     company: 'Independent Clients',
     role: 'AI Engineer and ML Consultant',
     highlights: [
-      'Delivered RAG knowledge retrieval systems using FAISS for enterprise-scale knowledge bases',
-      'Built Whisper transcription pipelines deployed on Linux VPS infrastructure',
-      'Created NL data exploration tools for Excel datasets and document embedding pipelines',
+      'Delivered RAG knowledge retrieval systems using FAISS, enabling enterprise clients to surface accurate information from large internal knowledge bases through semantic search',
+      'Built Whisper-based transcription pipelines on Linux VPS, converting audio content to searchable structured text and eliminating the need for manual transcription',
+      'Created natural language data exploration tools for Excel datasets and document embedding pipelines, allowing non-technical stakeholders to query and analyze structured data in plain English',
     ],
   },
 ]

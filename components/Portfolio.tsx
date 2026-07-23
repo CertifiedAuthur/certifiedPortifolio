@@ -30,21 +30,21 @@ const projects: Project[] = [
     url: 'https://learnvault.academy',
     stack: ['Next.js', 'Go', 'Asynq', 'PostgreSQL', 'LiveKit', 'pgvector', 'Caddy', 'VPS'],
     description:
-      'Production multi-tenant SaaS platform built end-to-end: custom auth with full tenant isolation, live classrooms via LiveKit, speaker-diarized transcription, AI-generated summaries and quizzes, RAG-powered tutoring with pgvector, credit billing system, and a PostgreSQL schema designed for unlimited organizations.',
+      'Production multi-tenant SaaS platform built end-to-end across eight integrated subsystems: custom auth with database-level tenant isolation, live classrooms via LiveKit with speaker diarization, AI-generated session summaries and quizzes, RAG-powered tutoring chatbot with pgvector, credit billing, async job processing with Asynq, and a unified PostgreSQL schema architected to support unlimited organizations from a single deployment.',
     detail: {
       problem:
         'Building a production-grade learning platform with live video, AI tutoring, and proper multi-tenancy means solving a dozen hard engineering problems simultaneously. Most teams bolt together disconnected third-party services that lack unified tenant boundaries and a coherent shared data model, resulting in fragile systems that break at the seams.',
       built:
         'Built every layer from scratch: custom authentication with database-level tenant isolation, live classrooms via LiveKit with speaker-diarized transcription piped into AI summary and quiz generation, a RAG-powered tutoring chatbot using pgvector for semantic retrieval, and a credit billing system, all sharing a single, cohesive PostgreSQL data model designed to scale to unlimited organizations.',
       highlights: [
-        'Custom auth system with full per-organization tenant isolation at the database level',
-        'Live classrooms powered by LiveKit with real-time speaker diarization',
-        'AI-generated session summaries and quizzes derived from transcripts',
-        'RAG tutoring chatbot backed by pgvector for semantic search',
-        'Credit-based billing system with per-tenant usage metering',
-        'PostgreSQL schema architected from the ground up for unlimited organizations',
-        'Go backend with Asynq for reliable async job processing',
-        'Deployed on VPS with Caddy as the reverse proxy',
+        'Custom auth system with full per-organization tenant isolation enforced at the database level',
+        'Live classrooms via LiveKit with concurrent session support and real-time speaker diarization piped directly into transcript generation',
+        'AI-generated session summaries and quizzes automatically derived from live transcripts',
+        'RAG tutoring chatbot backed by pgvector, enabling semantically accurate answers from session content',
+        'Credit-based billing system with per-tenant usage metering across all AI features',
+        'Unified PostgreSQL schema architected to support unlimited organizations from a single shared deployment',
+        'Go backend with Asynq for reliable async job processing, decoupling AI workloads from request latency',
+        'Deployed on VPS with Caddy as the reverse proxy and automatic TLS',
       ],
     },
   },
@@ -55,20 +55,20 @@ const projects: Project[] = [
     url: 'https://mcheckr.com',
     stack: ['Python', 'FastAPI', 'PostgreSQL', 'Redis', 'Celery', 'Next.js', 'Nginx', 'IMAP'],
     description:
-      'Distributed email aggregation system built from scratch: IMAP sync engine, PostgreSQL storage layer, multilingual financial classification, real-time alerting via Telegram, async task processing with Celery and Redis, and a full-stack Next.js dashboard. Deployed on VPS with Nginx reverse proxy.',
+      'Self-hosted distributed email aggregation system: direct IMAP sync engine monitoring multiple accounts simultaneously with zero credential exposure to third parties, multilingual financial classification, real-time Telegram alerts on critical transactions, resilient async processing with Celery and Redis, a PostgreSQL storage layer, and a full-stack Next.js dashboard. Deployed on VPS behind Nginx.',
     detail: {
       problem:
         'Monitoring financial emails across multiple accounts is tedious and error-prone. Existing solutions either require handing sensitive credentials to a third-party platform or rely on fragile browser scraping. There was no privacy-respecting, self-hosted option with intelligent classification and real-time alerting.',
       built:
         'Built a self-hosted email aggregation engine using direct IMAP connections, with multilingual financial email classification, real-time Telegram alerting on key transactions, Celery and Redis for resilient async processing, and a full-stack Next.js dashboard with filtering and search, entirely under the user\'s control, deployed on VPS behind Nginx.',
       highlights: [
-        'Custom IMAP sync engine built from scratch with no third-party email SDK',
-        'Multilingual financial email classification across multiple languages',
-        'Real-time Telegram alerts triggered on important transaction emails',
-        'Resilient async task processing with Celery and Redis',
-        'PostgreSQL storage layer with full send and event history',
-        'Full-stack Next.js dashboard with search and filtering',
-        'VPS deployment behind an Nginx reverse proxy',
+        'Custom IMAP sync engine monitoring multiple email accounts simultaneously, with no third-party SDK dependencies and zero credential exposure',
+        'Multilingual financial email classification detecting relevant transactions across multiple languages',
+        'Real-time Telegram alerts triggered on critical financial transaction emails, typically within seconds of arrival',
+        'Resilient async task processing with Celery and Redis, designed to recover from connection failures and clear backlogs automatically',
+        'PostgreSQL storage layer retaining full email and event history for audit and review',
+        'Full-stack Next.js dashboard with search, filtering, and per-account inbox views',
+        'VPS deployment behind an Nginx reverse proxy with zero dependency on third-party email SaaS',
       ],
     },
   },
@@ -79,21 +79,21 @@ const projects: Project[] = [
     desktop: true,
     stack: ['Go', 'Wails v2', 'React', 'TypeScript', 'SQLite', 'WebView2', 'SMTP/IMAP'],
     description:
-      'Native Windows desktop application for managing large-scale email campaigns across multiple rotating SMTP accounts. Features an async send engine with pause/resume/cancel, self-healing circuit-breaker per SMTP account, DKIM signing, bounce/complaint automation via IMAP/POP3, open/click tracking, and full reporting, all stored in a portable encrypted SQLite project file.',
+      'Native Windows desktop application for managing email campaigns across unlimited rotating SMTP accounts, with no per-email fees and no third-party credential exposure. Features an async send engine with pause/resume/cancel mid-campaign, self-healing circuit breakers per SMTP account, DKIM signing, bounce/complaint automation via IMAP/POP3, local open/click tracking, and full campaign history in a portable encrypted SQLite project file.',
     detail: {
       problem:
         'Bulk email SaaS platforms own your sending infrastructure, charge per email sent, throttle your volume, and store your SMTP credentials on their servers. The client needed complete control over their delivery pipeline: no per-email fees, no third-party data exposure, no rate limits they didn\'t set themselves, and full visibility into every send.',
       built:
         'Built a native Windows desktop application that moves the entire sending pipeline to the client\'s machine: SMTP rotation across unlimited accounts with self-healing circuit breakers, an async send engine with pause/resume/cancel, DKIM signing via in-app RSA key generation, IMAP/POP3 bounce and complaint automation, local open/click tracking, and a full reporting layer, all stored inside an encrypted, portable SQLite project file.',
       highlights: [
-        'Unlimited SMTP accounts grouped into round-robin or weighted rotation pools',
-        'Self-healing circuit breaker per account, auto-recovers after temporary failures',
-        'Async send engine with pause, resume, and cancel at any point during a campaign',
-        'DKIM signing with in-app RSA key pair generation and DNS record output',
-        'Bounce and spam complaint automation via IMAP/POP3 polling',
-        'Local open/click tracking server with zero third-party analytics dependency',
-        'SMTP credentials encrypted at rest using Windows DPAPI',
-        'Portable .mfproj project file; one file holds an entire campaign and its history',
+        'Unlimited SMTP accounts grouped into round-robin or weighted rotation pools, eliminating per-email sending fees',
+        'Self-healing circuit breaker per account, auto-recovering after temporary failures without manual intervention',
+        'Async send engine capable of handling campaigns of any size with pause, resume, and cancel at any point mid-campaign',
+        'DKIM signing with in-app RSA key pair generation and formatted DNS record output',
+        'Bounce and spam complaint automation via IMAP/POP3 polling, keeping lists clean without manual processing',
+        'Local open/click tracking server eliminating third-party analytics dependencies and any associated per-event tracking fees',
+        'SMTP credentials encrypted at rest using Windows DPAPI, never leaving the client\'s machine',
+        'Portable .mfproj project file; one file holds an entire campaign, its configuration, and its complete send history',
       ],
     },
   },
@@ -105,19 +105,19 @@ const infinimail: Project = {
   url: 'https://infinimail.certifiedaiautomation.com/',
   stack: ['Next.js', 'FastAPI', 'OpenAI', 'Python'],
   description:
-    'Full-stack AI email generation platform with custom campaign management, personalized content generation via LLM integration, and a Next.js frontend. Designed for marketing teams running high-volume outreach at scale.',
+    'Full-stack AI email generation platform that produces unique, personalized content for every recipient in a campaign, eliminating the manual bottleneck of writing individual emails at volume. Features custom campaign management, personalization token support, OpenAI integration, and a Next.js dashboard for previewing and launching high-volume outreach at scale.',
   detail: {
     problem:
       'Marketing teams running high-volume outreach campaigns face a content bottleneck: writing unique, personalized emails for hundreds of recipients manually is slow, inconsistent, and doesn\'t scale to the volume modern outreach requires.',
     built:
       'Built a full-stack AI email generation platform where teams define campaign parameters and the system generates personalized, contextually relevant content via LLM integration, with a campaign management layer and a Next.js dashboard to organize, preview, and launch campaigns at scale.',
     highlights: [
-      'LLM-powered personalized email content generation per recipient',
-      'Campaign management system with template and audience targeting',
-      'Personalization token support for per-recipient field substitution',
-      'Real-time content preview in the campaign dashboard',
-      'FastAPI backend with direct OpenAI API integration',
-      'Next.js frontend with full campaign lifecycle management',
+      'LLM-powered content generation producing unique, contextually personalized email copy for every individual recipient in a campaign',
+      'Campaign management system with template customization, audience targeting, and full lifecycle control',
+      'Personalization token support enabling per-recipient field substitution at generation time',
+      'Real-time content preview in the dashboard before any campaign is launched',
+      'FastAPI backend with direct OpenAI API integration for low-latency generation at scale',
+      'Next.js frontend managing the complete campaign lifecycle from setup through send',
     ],
   },
 }
@@ -128,19 +128,19 @@ const zorai: Project = {
   contain: true,
   stack: ['Python', 'LangGraph', 'pgvector', 'Celery', 'FastAPI', 'Redis'],
   description:
-    'Complete AI content operations system: knowledge ingestion, dual-mode retrieval combining vector search and graph-based reasoning, multi-platform post generation with human review workflow, Celery-based scheduling, and automated publishing to X, LinkedIn, Substack, and Reddit.',
+    'Complete AI content operations system that eliminates manual content creation across four platforms simultaneously: knowledge ingestion with dual-mode retrieval (vector search combined with graph-based reasoning), LLM-generated posts tailored to the format and audience of each platform, human review before any publish, and Celery-based scheduling for fully automated distribution to X, LinkedIn, Substack, and Reddit.',
   detail: {
     problem:
       'Maintaining a consistent, high-quality presence across X, LinkedIn, Substack, and Reddit simultaneously demands constant content production, a creative and operational burden that consumes significant bandwidth and is nearly impossible to sustain manually without sacrificing quality or consistency.',
     built:
       'Built a complete AI content operations system: a knowledge ingestion pipeline indexes source material, dual-mode retrieval (vector search + graph-based reasoning) surfaces the most relevant content for each platform, LLM generation produces platform-specific posts, a human review workflow ensures quality before publish, and Celery-based scheduling handles automated multi-platform distribution.',
     highlights: [
-      'Knowledge base ingestion and indexing pipeline with pgvector',
-      'Dual-mode retrieval combining vector similarity search and graph-based reasoning',
-      'Platform-specific post generation tailored to X, LinkedIn, Substack, and Reddit',
-      'Human-in-the-loop review and approval workflow before any publish',
-      'Celery-based scheduling with automated multi-platform publishing',
-      'LangGraph orchestration for the full content generation pipeline',
+      'Knowledge base ingestion and indexing pipeline with pgvector, making source material semantically searchable',
+      'Dual-mode retrieval combining vector similarity search and graph-based reasoning to surface the most contextually relevant content',
+      'Platform-specific post generation simultaneously targeting X, LinkedIn, Substack, and Reddit, each adapted to the distinct format and audience of that platform',
+      'Human-in-the-loop review and approval workflow ensuring every post meets quality standards before any automated publish',
+      'Celery-based scheduling reducing content distribution across all four platforms to a zero-touch operation after review',
+      'LangGraph orchestration managing the full content generation pipeline from ingestion through scheduled publish',
     ],
   },
 }

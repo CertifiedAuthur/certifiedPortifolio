@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import ThemeToggle from './ThemeToggle'
 
-const sections = ['header', 'about', 'skills', 'services', 'portfolio', 'contact']
-const labels   = ['Home', 'About', 'Skills', 'Services', 'Work', 'Contact']
+const sections = ['header', 'about', 'experience', 'portfolio', 'skills', 'services', 'contact']
+const labels   = ['Home', 'About', 'Experience', 'Work', 'Skills', 'Services', 'Contact']
 
 export default function Navbar() {
   const [active, setActive]     = useState('header')

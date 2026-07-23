@@ -9,10 +9,14 @@ const socials = [
   { href: 'https://web.facebook.com/profile.php?id=100095382873499', icon: 'fa-brands fa-facebook' },
   { href: 'https://x.com/AuthurOkafor',                              icon: 'fa-brands fa-x-twitter' },
   { href: 'https://www.instagram.com/official_certifiedauthur/',     icon: 'fa-brands fa-instagram' },
-  {
-    href: 'https://www.linkedin.com/in/chibuzor-okafor-0b9a92374',
-    icon: 'fa-brands fa-linkedin',
-  },
+  { href: 'https://www.linkedin.com/in/chibuzor-okafor-0b9a92374',  icon: 'fa-brands fa-linkedin'  },
+]
+
+const openTo = [
+  'AI engineering roles at product companies and startups',
+  'Technical consulting and architecture design',
+  'Founding engineer positions building AI products',
+  'Long-term partnerships on SaaS and infrastructure',
 ]
 
 export default function Contact() {
@@ -49,12 +53,35 @@ export default function Contact() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16">
 
           {/* Left: info */}
-          <Reveal direction="left" className="w-full lg:w-[35%] shrink-0">
-            <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-foreground mb-8">
-              Contact Me
+          <Reveal direction="left" className="w-full lg:w-[38%] shrink-0">
+            <span className="eyebrow text-accent block mb-5">Contact</span>
+            <h2 className="font-display text-4xl sm:text-[3.25rem] font-bold text-foreground leading-tight mb-6">
+              Let&apos;s Work<br />
+              Together
             </h2>
 
-            <div className="space-y-4 text-[15px] text-muted">
+            <p className="text-muted text-[15px] leading-relaxed mb-8">
+              I take on meaningful AI engineering work. Whether you are building a product,
+              scaling infrastructure, or integrating AI into existing systems, reach out and
+              let&apos;s talk about what you are trying to build.
+            </p>
+
+            {/* Open to */}
+            <div className="mb-8">
+              <p className="text-[12px] font-semibold text-foreground uppercase tracking-[0.15em] mb-4 font-display">
+                Currently open to
+              </p>
+              <ul className="space-y-2.5">
+                {openTo.map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-[14px] text-muted leading-relaxed">
+                    <i className="fa-solid fa-check text-accent text-[10px] mt-[5px] shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="space-y-3 text-[15px] text-muted mb-8">
               <p className="flex items-center gap-3">
                 <i className="fa-solid fa-paper-plane text-accent text-xl w-6" />
                 chibuzorauthur@gmail.com
@@ -65,7 +92,7 @@ export default function Contact() {
               </p>
             </div>
 
-            <div className="flex gap-4 mt-8">
+            <div className="flex gap-4 mb-8">
               {socials.map(({ href, icon }) => (
                 <a
                   key={href}
@@ -82,7 +109,7 @@ export default function Contact() {
             <a
               href="/images/Okafor Authur Resume.pdf"
               download
-              className="inline-block mt-10 bg-accent text-white px-8 py-3 rounded-md text-[14px] font-medium hover:opacity-90 transition-opacity duration-200"
+              className="inline-block bg-accent text-white px-8 py-3 rounded-md text-[14px] font-medium hover:opacity-90 transition-opacity duration-200"
             >
               Download CV
             </a>
@@ -111,24 +138,24 @@ export default function Contact() {
               />
               <textarea
                 name="message"
-                rows={6}
-                placeholder="Your Message"
+                rows={7}
+                placeholder="Tell me what you're building..."
                 value={form.message}
                 onChange={handleChange}
                 required
-                className="w-full bg-surface-3 border-2 border-border text-white placeholder-muted rounded-lg px-4 py-3.5 text-[15px] outline-none focus:border-accent transition-colors duration-200 resize-none"
+                className="w-full bg-surface-3 border-2 border-border text-foreground placeholder-muted rounded-lg px-4 py-3.5 text-[15px] outline-none focus:border-accent transition-colors duration-200 resize-none"
               />
               <button
                 type="submit"
                 disabled={status === 'sending'}
                 className="bg-accent text-white px-14 py-3.5 rounded-md text-[16px] font-medium hover:opacity-90 transition-opacity duration-200 disabled:opacity-60 cursor-pointer disabled:cursor-not-allowed"
               >
-                {status === 'sending' ? 'Sending…' : 'Submit'}
+                {status === 'sending' ? 'Sending...' : 'Send Message'}
               </button>
 
               {status === 'success' && (
                 <p className="text-[14px] text-green-400">
-                  Message sent! I&apos;ll get back to you soon.
+                  Message sent. I&apos;ll get back to you soon.
                 </p>
               )}
               {status === 'error' && (

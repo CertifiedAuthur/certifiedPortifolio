@@ -172,7 +172,7 @@ function ProjectCard({
 
       {/* Card footer: name + stack */}
       <div className="px-5 pt-4 pb-5 flex flex-col gap-3 flex-1">
-        <h3 className="text-[15px] font-semibold text-foreground">{project.name}</h3>
+        <h3 className="font-display font-bold text-[15px] text-foreground">{project.name}</h3>
         <div className="flex flex-wrap gap-1.5">
           {project.stack.map((tag) => (
             <span
@@ -190,7 +190,7 @@ function ProjectCard({
         className="absolute inset-0 flex flex-col items-center justify-center text-center p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 backdrop-blur-sm"
         style={{ background: 'linear-gradient(to bottom, rgba(8,8,8,0.92), rgba(255,0,79,0.9))' }}
       >
-        <h3 className="text-lg font-semibold text-white mb-3">{project.name}</h3>
+        <h3 className="font-display font-bold text-lg text-white mb-3">{project.name}</h3>
         <p className="text-[13px] leading-snug text-white/90 mb-5 line-clamp-4">{project.description}</p>
         <span className="inline-flex items-center gap-2 bg-white/15 text-white text-[12px] font-medium px-4 py-2 rounded-full border border-white/25">
           <i className="fa-solid fa-up-right-and-down-left-from-center text-[10px]" />
@@ -238,7 +238,7 @@ function DrawerContent({ project, onClose }: { project: Project; onClose: () => 
         <div className="px-7 py-7 space-y-7">
           {/* Name + stack */}
           <div>
-            <h2 className="text-[22px] font-semibold text-foreground mb-4">{project.name}</h2>
+            <h2 className="font-display font-bold text-[22px] text-foreground mb-4">{project.name}</h2>
             <div className="flex flex-wrap gap-1.5">
               {project.stack.map((tag) => (
                 <span
@@ -341,11 +341,12 @@ export default function Portfolio() {
     <section id="portfolio" className="py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-6 sm:px-[8%]">
         <Reveal>
-          <h2 className="section-title text-4xl sm:text-[3.5rem] font-semibold text-foreground mb-4">
+          <span className="eyebrow text-accent block mb-5">Projects</span>
+          <h2 className="font-display text-4xl sm:text-[3.25rem] font-bold text-foreground leading-tight mb-4">
             Shipped Systems
           </h2>
-          <p className="text-muted text-[15px] mb-14 max-w-xl">
-            Production applications built end-to-end. Click any card for the full breakdown.
+          <p className="text-muted text-[15px] mb-14 max-w-xl leading-relaxed">
+            Production applications built end-to-end. Click any card for the full engineering breakdown.
           </p>
         </Reveal>
 

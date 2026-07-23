@@ -206,9 +206,14 @@ function DrawerContent({ project, onClose }: { project: Project; onClose: () => 
     <>
       {/* Header */}
       <div className="flex items-center justify-between px-7 py-4 border-b border-border shrink-0">
-        <span className="text-[11px] font-semibold text-muted uppercase tracking-[0.14em]">
-          Project Detail
-        </span>
+        <button
+          onClick={onClose}
+          aria-label="Go back"
+          className="flex items-center gap-2 text-muted hover:text-foreground transition-colors duration-200 cursor-pointer group"
+        >
+          <i className="fa-solid fa-arrow-left text-[13px] group-hover:-translate-x-0.5 transition-transform duration-200" />
+          <span className="text-[13px] font-medium">Back</span>
+        </button>
         <button
           onClick={onClose}
           aria-label="Close panel"
@@ -319,10 +324,17 @@ export default function Portfolio() {
     if (!active) return
     const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setActive(null) }
     document.addEventListener('keydown', onKey)
-    document.body.style.overflow = 'hidden'
+    // position:fixed preserves scroll position on mobile (overflow:hidden alone causes snap-to-top on iOS)
+    const scrollY = window.scrollY
+    document.body.style.position = 'fixed'
+    document.body.style.top = `-${scrollY}px`
+    document.body.style.width = '100%'
     return () => {
       document.removeEventListener('keydown', onKey)
-      document.body.style.overflow = ''
+      document.body.style.position = ''
+      document.body.style.top = ''
+      document.body.style.width = ''
+      window.scrollTo(0, scrollY)
     }
   }, [active])
 

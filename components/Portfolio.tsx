@@ -209,10 +209,9 @@ function DrawerContent({ project, onClose }: { project: Project; onClose: () => 
         <button
           onClick={onClose}
           aria-label="Go back"
-          className="flex items-center gap-2 text-muted hover:text-foreground transition-colors duration-200 cursor-pointer group"
+          className="w-9 h-9 flex items-center justify-center rounded-lg text-muted hover:text-foreground hover:bg-surface-3 transition-colors duration-200 cursor-pointer group"
         >
-          <i className="fa-solid fa-arrow-left text-[13px] group-hover:-translate-x-0.5 transition-transform duration-200" />
-          <span className="text-[13px] font-medium">Back</span>
+          <i className="fa-solid fa-arrow-left text-[16px] group-hover:-translate-x-0.5 transition-transform duration-200" />
         </button>
         <button
           onClick={onClose}
@@ -388,7 +387,7 @@ export default function Portfolio() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/65 backdrop-blur-[2px] z-40"
+            className="fixed inset-0 bg-black/65 backdrop-blur-[2px] z-[60]"
             onClick={() => setActive(null)}
           >
             <motion.aside

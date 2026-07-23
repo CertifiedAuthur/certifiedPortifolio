@@ -8,6 +8,7 @@ interface Project {
   stack: string[]
   url?: string
   contain?: boolean
+  desktop?: boolean
 }
 
 const projects: Project[] = [
@@ -30,14 +31,24 @@ const projects: Project[] = [
       'Distributed email aggregation system built from scratch: IMAP sync engine, PostgreSQL storage layer, multilingual financial classification, real-time alerting via Telegram, async task processing with Celery and Redis, and a full-stack Next.js dashboard. Deployed on VPS with Nginx reverse proxy.',
   },
   {
-    name: 'InfiniMail',
-    image: '/images/EmailGen.jpg',
-    url: 'https://infinimail.certifiedaiautomation.com/',
-    stack: ['Next.js', 'FastAPI', 'OpenAI', 'Python'],
+    name: 'MailForge',
+    image: '/images/mailforge-icon.png',
+    contain: true,
+    desktop: true,
+    stack: ['Go', 'Wails v2', 'React', 'TypeScript', 'SQLite', 'WebView2', 'SMTP/IMAP'],
     description:
-      'Full-stack AI email generation platform with custom campaign management, personalized content generation via LLM integration, and a Next.js frontend. Designed for marketing teams running high-volume outreach at scale.',
+      'Native Windows desktop application for managing large-scale email campaigns across multiple rotating SMTP accounts. Features an async send engine with pause/resume/cancel, self-healing circuit-breaker per SMTP account, DKIM signing, bounce/complaint automation via IMAP/POP3, open/click tracking, and full reporting — all stored in a portable encrypted SQLite project file.',
   },
 ]
+
+const infinimail: Project = {
+  name: 'InfiniMail',
+  image: '/images/EmailGen.jpg',
+  url: 'https://infinimail.certifiedaiautomation.com/',
+  stack: ['Next.js', 'FastAPI', 'OpenAI', 'Python'],
+  description:
+    'Full-stack AI email generation platform with custom campaign management, personalized content generation via LLM integration, and a Next.js frontend. Designed for marketing teams running high-volume outreach at scale.',
+}
 
 const zorai: Project = {
   name: 'Zorai',
@@ -96,6 +107,11 @@ function ProjectCard({ project }: { project: Project }) {
             <i className="fa-solid fa-arrow-up-right-from-square text-[11px]" />
             Visit App
           </a>
+        ) : project.desktop ? (
+          <span className="inline-flex items-center gap-2 bg-white/15 text-white/80 text-[13px] font-semibold px-5 py-2.5 rounded-full cursor-default border border-white/20">
+            <i className="fa-brands fa-windows text-[11px]" />
+            Windows Desktop App
+          </span>
         ) : (
           <span className="inline-flex items-center gap-2 bg-white/20 text-white/70 text-[13px] font-semibold px-5 py-2.5 rounded-full cursor-default">
             <i className="fa-solid fa-clock text-[11px]" />
@@ -129,13 +145,14 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* Row 2: Zorai centred */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <div className="hidden lg:block" />
-          <Reveal delay={0.13}>
+        {/* Row 2: InfiniMail + Zorai centred */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:max-w-[66.667%] mx-auto">
+          <Reveal delay={0.1}>
+            <ProjectCard project={infinimail} />
+          </Reveal>
+          <Reveal delay={0.2}>
             <ProjectCard project={zorai} />
           </Reveal>
-          <div className="hidden lg:block" />
         </div>
 
         <div className="text-center mt-14">

@@ -33,9 +33,9 @@ const projects: Project[] = [
       'Production multi-tenant SaaS platform built end-to-end: custom auth with full tenant isolation, live classrooms via LiveKit, speaker-diarized transcription, AI-generated summaries and quizzes, RAG-powered tutoring with pgvector, credit billing system, and a PostgreSQL schema designed for unlimited organizations.',
     detail: {
       problem:
-        'Building a production-grade learning platform with live video, AI tutoring, and proper multi-tenancy means solving a dozen hard engineering problems simultaneously. Most teams bolt together disconnected third-party services that lack unified tenant boundaries and a coherent shared data model — resulting in fragile systems that break at the seams.',
+        'Building a production-grade learning platform with live video, AI tutoring, and proper multi-tenancy means solving a dozen hard engineering problems simultaneously. Most teams bolt together disconnected third-party services that lack unified tenant boundaries and a coherent shared data model, resulting in fragile systems that break at the seams.',
       built:
-        'Built every layer from scratch: custom authentication with database-level tenant isolation, live classrooms via LiveKit with speaker-diarized transcription piped into AI summary and quiz generation, a RAG-powered tutoring chatbot using pgvector for semantic retrieval, and a credit billing system — all sharing a single, cohesive PostgreSQL data model designed to scale to unlimited organizations.',
+        'Built every layer from scratch: custom authentication with database-level tenant isolation, live classrooms via LiveKit with speaker-diarized transcription piped into AI summary and quiz generation, a RAG-powered tutoring chatbot using pgvector for semantic retrieval, and a credit billing system, all sharing a single, cohesive PostgreSQL data model designed to scale to unlimited organizations.',
       highlights: [
         'Custom auth system with full per-organization tenant isolation at the database level',
         'Live classrooms powered by LiveKit with real-time speaker diarization',
@@ -60,9 +60,9 @@ const projects: Project[] = [
       problem:
         'Monitoring financial emails across multiple accounts is tedious and error-prone. Existing solutions either require handing sensitive credentials to a third-party platform or rely on fragile browser scraping. There was no privacy-respecting, self-hosted option with intelligent classification and real-time alerting.',
       built:
-        'Built a self-hosted email aggregation engine using direct IMAP connections, with multilingual financial email classification, real-time Telegram alerting on key transactions, Celery and Redis for resilient async processing, and a full-stack Next.js dashboard with filtering and search — entirely under the user\'s control, deployed on VPS behind Nginx.',
+        'Built a self-hosted email aggregation engine using direct IMAP connections, with multilingual financial email classification, real-time Telegram alerting on key transactions, Celery and Redis for resilient async processing, and a full-stack Next.js dashboard with filtering and search, entirely under the user\'s control, deployed on VPS behind Nginx.',
       highlights: [
-        'Custom IMAP sync engine built from scratch — no third-party email SDK',
+        'Custom IMAP sync engine built from scratch with no third-party email SDK',
         'Multilingual financial email classification across multiple languages',
         'Real-time Telegram alerts triggered on important transaction emails',
         'Resilient async task processing with Celery and Redis',
@@ -79,21 +79,21 @@ const projects: Project[] = [
     desktop: true,
     stack: ['Go', 'Wails v2', 'React', 'TypeScript', 'SQLite', 'WebView2', 'SMTP/IMAP'],
     description:
-      'Native Windows desktop application for managing large-scale email campaigns across multiple rotating SMTP accounts. Features an async send engine with pause/resume/cancel, self-healing circuit-breaker per SMTP account, DKIM signing, bounce/complaint automation via IMAP/POP3, open/click tracking, and full reporting — all stored in a portable encrypted SQLite project file.',
+      'Native Windows desktop application for managing large-scale email campaigns across multiple rotating SMTP accounts. Features an async send engine with pause/resume/cancel, self-healing circuit-breaker per SMTP account, DKIM signing, bounce/complaint automation via IMAP/POP3, open/click tracking, and full reporting, all stored in a portable encrypted SQLite project file.',
     detail: {
       problem:
-        'Bulk email SaaS platforms own your sending infrastructure, charge per email sent, throttle your volume, and store your SMTP credentials on their servers. The client needed complete control over their delivery pipeline — no per-email fees, no third-party data exposure, no rate limits they didn\'t set themselves, and full visibility into every send.',
+        'Bulk email SaaS platforms own your sending infrastructure, charge per email sent, throttle your volume, and store your SMTP credentials on their servers. The client needed complete control over their delivery pipeline: no per-email fees, no third-party data exposure, no rate limits they didn\'t set themselves, and full visibility into every send.',
       built:
-        'Built a native Windows desktop application that moves the entire sending pipeline to the client\'s machine — SMTP rotation across unlimited accounts with self-healing circuit breakers, an async send engine with pause/resume/cancel, DKIM signing via in-app RSA key generation, IMAP/POP3 bounce and complaint automation, local open/click tracking, and a full reporting layer — all stored inside an encrypted, portable SQLite project file.',
+        'Built a native Windows desktop application that moves the entire sending pipeline to the client\'s machine: SMTP rotation across unlimited accounts with self-healing circuit breakers, an async send engine with pause/resume/cancel, DKIM signing via in-app RSA key generation, IMAP/POP3 bounce and complaint automation, local open/click tracking, and a full reporting layer, all stored inside an encrypted, portable SQLite project file.',
       highlights: [
         'Unlimited SMTP accounts grouped into round-robin or weighted rotation pools',
-        'Self-healing circuit breaker per account — auto-recovers after temporary failures',
+        'Self-healing circuit breaker per account, auto-recovers after temporary failures',
         'Async send engine with pause, resume, and cancel at any point during a campaign',
         'DKIM signing with in-app RSA key pair generation and DNS record output',
         'Bounce and spam complaint automation via IMAP/POP3 polling',
-        'Local open/click tracking server — zero third-party analytics dependency',
+        'Local open/click tracking server with zero third-party analytics dependency',
         'SMTP credentials encrypted at rest using Windows DPAPI',
-        'Portable .mfproj project file — one file holds an entire campaign and its history',
+        'Portable .mfproj project file; one file holds an entire campaign and its history',
       ],
     },
   },
@@ -110,7 +110,7 @@ const infinimail: Project = {
     problem:
       'Marketing teams running high-volume outreach campaigns face a content bottleneck: writing unique, personalized emails for hundreds of recipients manually is slow, inconsistent, and doesn\'t scale to the volume modern outreach requires.',
     built:
-      'Built a full-stack AI email generation platform where teams define campaign parameters and the system generates personalized, contextually relevant content via LLM integration — with a campaign management layer and a Next.js dashboard to organize, preview, and launch campaigns at scale.',
+      'Built a full-stack AI email generation platform where teams define campaign parameters and the system generates personalized, contextually relevant content via LLM integration, with a campaign management layer and a Next.js dashboard to organize, preview, and launch campaigns at scale.',
     highlights: [
       'LLM-powered personalized email content generation per recipient',
       'Campaign management system with template and audience targeting',
@@ -131,7 +131,7 @@ const zorai: Project = {
     'Complete AI content operations system: knowledge ingestion, dual-mode retrieval combining vector search and graph-based reasoning, multi-platform post generation with human review workflow, Celery-based scheduling, and automated publishing to X, LinkedIn, Substack, and Reddit.',
   detail: {
     problem:
-      'Maintaining a consistent, high-quality presence across X, LinkedIn, Substack, and Reddit simultaneously demands constant content production — a creative and operational burden that consumes significant bandwidth and is nearly impossible to sustain manually without sacrificing quality or consistency.',
+      'Maintaining a consistent, high-quality presence across X, LinkedIn, Substack, and Reddit simultaneously demands constant content production, a creative and operational burden that consumes significant bandwidth and is nearly impossible to sustain manually without sacrificing quality or consistency.',
     built:
       'Built a complete AI content operations system: a knowledge ingestion pipeline indexes source material, dual-mode retrieval (vector search + graph-based reasoning) surfaces the most relevant content for each platform, LLM generation produces platform-specific posts, a human review workflow ensures quality before publish, and Celery-based scheduling handles automated multi-platform distribution.',
     highlights: [
@@ -367,7 +367,7 @@ export default function Portfolio() {
         </div>
       </div>
 
-      {/* Detail drawer: backdrop fades, panel slides — both animate exit */}
+      {/* Detail drawer: backdrop fades, panel slides, both animate exit */}
       <AnimatePresence>
         {active && (
           <motion.div

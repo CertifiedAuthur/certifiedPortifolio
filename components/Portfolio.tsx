@@ -127,7 +127,7 @@ const gpinvent: Project = {
   image: '/images/app_logo_transparent.png',
   contain: true,
   desktop: true,
-  stack: ['FastAPI', 'PostgreSQL', 'Next.js', 'Expo', 'Redis', 'Celery', 'SQLite', 'Docker', 'Claude AI'],
+  stack: ['FastAPI', 'PostgreSQL', 'Next.js', 'Expo', 'Redis', 'Celery', 'SQLite', 'Docker'],
   description:
     'Offline-first inventory management and POS platform for a live Nigerian electrical supply business. Three client surfaces (web admin, web POS, native iOS/Android) share one FastAPI backend and one sync contract: every sale commits locally in under two seconds and syncs opportunistically without blocking on the network. Conflicts surface to admins for explicit resolution rather than auto-resolving. Ships a multi-unit inventory model, a live financial portfolio dashboard, scheduled email reporting, encrypted nightly backups to the business\'s own Google Drive, and Gia, a read-only AI assistant constrained to pre-validated query templates so it can never generate or execute free-form SQL against production data.',
   detail: {

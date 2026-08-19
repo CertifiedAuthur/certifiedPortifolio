@@ -122,6 +122,33 @@ const infinimail: Project = {
   },
 }
 
+const gpinvent: Project = {
+  name: 'GPI Invent',
+  image: '/images/app_logo_transparent.png',
+  contain: true,
+  desktop: true,
+  stack: ['FastAPI', 'PostgreSQL', 'Next.js', 'Expo', 'Redis', 'Celery', 'SQLite', 'Docker', 'Claude AI'],
+  description:
+    'Offline-first inventory management and POS platform for a live Nigerian electrical supply business. Three client surfaces (web admin, web POS, native iOS/Android) share one FastAPI backend and one sync contract: every sale commits locally in under two seconds and syncs opportunistically without blocking on the network. Conflicts surface to admins for explicit resolution rather than auto-resolving. Ships a multi-unit inventory model, a live financial portfolio dashboard, scheduled email reporting, encrypted nightly backups to the business\'s own Google Drive, and Gia, a read-only AI assistant constrained to pre-validated query templates so it can never generate or execute free-form SQL against production data.',
+  detail: {
+    problem:
+      'Small electrical-supply retailers run on cheap tablets with unreliable internet. Existing inventory software either stops working when the network drops or uses silent auto-merge that can corrupt stock counts and pricing. Neither is acceptable when the numbers are a live business\'s actual books.',
+    built:
+      'Built the entire system solo: FastAPI backend, Next.js web admin and POS, native Expo apps for Android and iOS, and a shared offline-first sync contract backed by Dexie on web and expo-sqlite on mobile. Every write commits to a local database first; the server is idempotent on client-minted UUIDs so retries and dropped connections can never double-sell. Conflicts between offline edits and server-side changes are detected and queued for an admin to resolve. Also ships a multi-unit inventory model, a live financial portfolio dashboard, Celery-based scheduled reporting, Fernet-encrypted nightly PostgreSQL backups to the business\'s own Google Drive, and Gia, a read-only AI assistant that selects from pre-validated query templates rather than generating free-form SQL.',
+    highlights: [
+      'Offline-first sync across web and native mobile: every sale commits locally in under two seconds and syncs opportunistically when connectivity returns',
+      'Client-minted UUIDs make every transaction idempotent on the server forever, eliminating double-sells across flaky connections and retries',
+      'Conflict detection surfaces price and stock discrepancies to admins for explicit resolution rather than silently auto-merging',
+      'Multi-unit inventory model: stock tracked in a canonical base unit with automatic conversion at every sale and stock receipt',
+      'Live financial portfolio dashboard showing capital invested, potential revenue, and estimated gross margin across all current stock in real time',
+      'Diagnosed and fixed a live valuation bug where multi-unit costs were being multiplied by base-unit quantities, inflating reported portfolio value by two orders of magnitude',
+      'Responded to a live production security incident: traced a cryptominer to a Next.js RCE advisory, patched the framework, and hardened containers to make payload execution structurally impossible',
+      'Gia, a read-only AI assistant constrained to pre-validated query templates so the model can never generate or execute free-form SQL against production data',
+      'Nightly PostgreSQL backups encrypted with Fernet and uploaded via OAuth to the business\'s own Google Drive with SHA-256 checksum verification and a persistent retry queue',
+    ],
+  },
+}
+
 const zorai: Project = {
   name: 'Zorai',
   image: '/images/Zorai_logo.png',
@@ -359,12 +386,15 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* Row 2: InfiniMail + Zorai centred */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:max-w-[66.667%] mx-auto">
+        {/* Row 2: GPI Invent, InfiniMail, Zorai */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           <Reveal delay={0.1}>
-            <ProjectCard project={infinimail} onClick={() => setActive(infinimail)} />
+            <ProjectCard project={gpinvent} onClick={() => setActive(gpinvent)} />
           </Reveal>
           <Reveal delay={0.2}>
+            <ProjectCard project={infinimail} onClick={() => setActive(infinimail)} />
+          </Reveal>
+          <Reveal delay={0.3}>
             <ProjectCard project={zorai} onClick={() => setActive(zorai)} />
           </Reveal>
         </div>

@@ -122,6 +122,33 @@ const infinimail: Project = {
   },
 }
 
+const sellerStudio: Project = {
+  name: 'Seller Studio',
+  image: '/images/seller-studio-logo.png',
+  contain: true,
+  url: 'https://sellerstudioapp.com/',
+  stack: ['Next.js 15', 'Go', 'PostgreSQL', 'Redis', 'Paystack', 'Gemini', 'Docker', 'Caddy'],
+  description:
+    'Multi-tenant SaaS platform built for Nigerian e-commerce sellers to prepare, organise, and upload products to Jumia. Guides each product through five preparation steps — category assignment, AI-assisted pricing, AI-generated listing content, AI image generation, and final upload — with a credit-based billing system via Paystack and a full admin panel for platform operators.',
+  detail: {
+    problem:
+      'Nigerian Jumia sellers manually bridge the gap between supplier price lists and Jumia-ready product listings, a process that involves calculating selling prices with multiple deductions, writing titles, descriptions, and specifications for each product, and producing studio-quality images — all tedious, error-prone, and impossible to scale across a large catalogue.',
+    built:
+      'Built a full multi-tenant SaaS platform: Go REST API backend with PostgreSQL and Redis, Next.js 15 App Router frontend, and a five-step product preparation workflow (category, pricing, listing, images, upload). AI drafts listing content and generates images; sellers review everything before saving. Ships a standalone pricing calculator, supplier catalogue import with CSV/Excel mapping, product combinations (combos/kits/packs), bulk listing batches tracked in the background, credit billing via Paystack with plan subscriptions and top-ups, and a superuser admin panel with platform-wide statistics, AI configuration, audit log, usage analytics, and health monitoring.',
+    highlights: [
+      'Multi-tenant architecture with full shop isolation: each business gets its own workspace, staff roles, and data boundary',
+      'AI-assisted pricing calculator that derives the Jumia selling price after commissions, VAT, FX uplift, and logistics — with live competitor market data for context',
+      'AI-powered listing content drafting covering title, key features, full description, what\'s in the box, warranty, and technical specifications, each editable and section-status-tracked',
+      'AI image generation pipeline with configurable view angle, style, and background — real-time job status and per-image download',
+      'Supplier catalogue import wizard: drag-and-drop CSV/Excel, automatic column header detection, three-step mapping and summary with per-row error reporting',
+      'Bulk listing preparation — select many products and trigger an AI batch job; background processing tracked on a dedicated Batches page',
+      'Product Combinations module with AI-generated combo/kit/pack suggestions from the seller\'s own catalogue, editable before saving',
+      'Credit-based billing via Paystack: monthly plan subscriptions plus one-time top-up packs that carry over and never expire',
+      'Superuser admin panel with platform statistics, user management, AI provider configuration, audit log, restriction matrix, credit usage analytics, and system health dashboard',
+    ],
+  },
+}
+
 const gpinvent: Project = {
   name: 'GPI Invent',
   image: '/images/app_logo_transparent.png',
@@ -386,15 +413,22 @@ export default function Portfolio() {
           ))}
         </div>
 
-        {/* Row 2: GPI Invent, InfiniMail, Zorai */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Row 2: Seller Studio, GPI Invent, InfiniMail */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
           <Reveal delay={0.1}>
-            <ProjectCard project={gpinvent} onClick={() => setActive(gpinvent)} />
+            <ProjectCard project={sellerStudio} onClick={() => setActive(sellerStudio)} />
           </Reveal>
           <Reveal delay={0.2}>
-            <ProjectCard project={infinimail} onClick={() => setActive(infinimail)} />
+            <ProjectCard project={gpinvent} onClick={() => setActive(gpinvent)} />
           </Reveal>
           <Reveal delay={0.3}>
+            <ProjectCard project={infinimail} onClick={() => setActive(infinimail)} />
+          </Reveal>
+        </div>
+
+        {/* Row 3: Zorai */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <Reveal delay={0.1}>
             <ProjectCard project={zorai} onClick={() => setActive(zorai)} />
           </Reveal>
         </div>
